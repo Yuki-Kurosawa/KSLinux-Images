@@ -24,9 +24,9 @@ $USER_CMD $DAK import-keyring -U '%s' /srv/dak/keyrings/upload-keyring.gpg  1>/d
 echo "DONE"
 
 echo -n "INITING AN EMPTY REPO ... "
-$USER_CMD $DAK admin architecture add amd64 "KSLinux 22.04.1 AMD64" 1>/dev/null 2>&1
+$USER_CMD $DAK admin architecture add amd64 "KSLinux 26 AMD64" 1>/dev/null 2>&1
 
-$USER_CMD $DAK admin suite add-all-arches trixie 22.04.1 origin=KSLinux label=KSL_22_04 codename=trixie signingkey=451DD5811062DFC93DF54EEC259531ED17EE37C1 1>/dev/null 2>&1
+$USER_CMD $DAK admin suite add-all-arches trixie 26 origin=KSLinux label=KSL_26 codename=trixie signingkey=451DD5811062DFC93DF54EEC259531ED17EE37C1 1>/dev/null 2>&1
 
 $USER_CMD $DAK admin component rm main 1>/dev/null 2>&1
 $USER_CMD $DAK admin component rm contrib 1>/dev/null 2>&1
