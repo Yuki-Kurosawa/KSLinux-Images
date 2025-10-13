@@ -29,5 +29,5 @@ RUN /dak.dev/init-dev.sh
 COPY dak.start /dak.start
 
 # IMAGE ENTRY
-#ENTRYPOINT [ "/dak.start/run.sh" ]
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/dak.start/run.sh" ]
+#ENTRYPOINT [ "/bin/bash" ]
