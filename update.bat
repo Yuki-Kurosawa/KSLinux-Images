@@ -1,3 +1,3 @@
-docker build -f dak.Dockerfile -t yukikurosawadev/debian_archive_kit:test-build .
+docker build -f Dak.Dockerfile -t yukikurosawadev/debian_archive_kit:test-build .
 docker run -it --rm yukikurosawadev/debian_archive_kit:test-build
 docker rmi yukikurosawadev/debian_archive_kit:test-build
