@@ -1,7 +1,7 @@
 FROM debian:trixie
 
 LABEL MAINTAINER="YukiKurosawaDev"
-LABEL VERSION="22.04.3-dak-20230817-kslinux"
+LABEL VERSION="26-dak-20251013-kslinux"
 
 # DEFINE PORTS
 ## POSTGRESQL
