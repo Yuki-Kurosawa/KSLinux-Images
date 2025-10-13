@@ -33,12 +33,7 @@ $USER_CMD $DAK admin component rm contrib 1>/dev/null 2>&1
 $USER_CMD $DAK admin component rm non-free 1>/dev/null 2>&1
 $USER_CMD $DAK admin component rm non-free-firmware 1>/dev/null 2>&1
 
-$USER_CMD $DAK admin component add main main 100 1>/dev/null 2>&1
-$USER_CMD $DAK admin component add restricted restricted 110 1>/dev/null 2>&1
-$USER_CMD $DAK admin component add universe universe 120 1>/dev/null 2>&1
-$USER_CMD $DAK admin component add multiverse multiverse 130 1>/dev/null 2>&1
-
-$USER_CMD $DAK admin s-c add trixie main restricted universe multiverse 1>/dev/null 2>&1
+$USER_CMD $DAK admin s-c add trixie main contrib non-free non-free-firmware 1>/dev/null 2>&1
 
 $USER_CMD $DAK init-dirs 1>/dev/null 2>&1
 
