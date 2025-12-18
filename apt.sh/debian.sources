@@ -14,5 +14,6 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.pgp
 
 Types: deb deb-src
 URIs: http://localhost.ksyuki.com/kslinux
-Suites: trixie trixie-updates
+Suites: trixie
 Components: main
+Trusted: yes

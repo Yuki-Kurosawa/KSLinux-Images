@@ -10,7 +10,9 @@ echo DONE
 
 echo -n "DOWNLOADING dak ... "
 cd /
-git clone https://salsa.debian.org/ftp-team/dak.git 1>/dev/null 2>&1
+#git clone https://salsa.debian.org/ftp-team/dak.git 1>/dev/null 2>&1
+tar -xvf dak.tar.gz 1>/dev/null 2>&1
+mv dak-deploy dak 1>/dev/null 2>&1
 chmod -Rv 0777 dak 1>/dev/null 2>&1 
 echo DONE
 

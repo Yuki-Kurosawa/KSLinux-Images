@@ -28,10 +28,10 @@ $USER_CMD $DAK admin architecture add amd64 "KSLinux 26 AMD64" 1>/dev/null 2>&1
 
 $USER_CMD $DAK admin suite add-all-arches trixie 26 origin=KSLinux label=KSL_26 codename=trixie signingkey=451DD5811062DFC93DF54EEC259531ED17EE37C1 1>/dev/null 2>&1
 
-$USER_CMD $DAK admin component rm main 1>/dev/null 2>&1
-$USER_CMD $DAK admin component rm contrib 1>/dev/null 2>&1
-$USER_CMD $DAK admin component rm non-free 1>/dev/null 2>&1
-$USER_CMD $DAK admin component rm non-free-firmware 1>/dev/null 2>&1
+#$USER_CMD $DAK admin component rm main 1>/dev/null 2>&1
+#$USER_CMD $DAK admin component rm contrib 1>/dev/null 2>&1
+#$USER_CMD $DAK admin component rm non-free 1>/dev/null 2>&1
+#$USER_CMD $DAK admin component rm non-free-firmware 1>/dev/null 2>&1
 
 $USER_CMD $DAK admin s-c add trixie main contrib non-free non-free-firmware 1>/dev/null 2>&1
 
