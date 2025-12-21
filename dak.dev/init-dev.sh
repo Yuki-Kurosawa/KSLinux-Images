@@ -16,8 +16,19 @@ KEY=451DD5811062DFC93DF54EEC259531ED17EE37C1
 KEYPATH=/dak.dev/keys/.no-key
 KEYRING=
 # DO SOME KEY SELECTION LOGIC HERE IF NEEDED
+DEB=$(find /dak.dev/keys -name "*.deb" | head -n 1)
+ASC=$(find /dak.dev/keys -name "*.asc" | head -n 1)
 
-if [ !-z "$KEYRING" ]; then
+if [ ! -z "$DEB" ]; then
+    KEYRING=$DEB
+fi
+
+if [ ! -z "$ASC" ]; then
+    KEYPATH=$ASC
+    KEY=$(gpg --show-keys $KEYPATH | head -n 2 | awk '{print $1}' | cut -d'/' -f2 | sed -e '1d')   
+fi
+
+if [ ! -z "$KEYRING" ]; then
     if [ ! -f "$KEYRING" ]; then
         echo "ERROR: KEY FILE NOT FOUND AT $KEYPATH"
         exit 1
