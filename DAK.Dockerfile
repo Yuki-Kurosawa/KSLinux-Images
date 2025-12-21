@@ -17,19 +17,22 @@ COPY dak.tar.gz /
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Shanghai
 
-# PACKAGE CONFIGURATIONS
+# COPY FILES
 COPY apt.sh /apt.sh
-RUN /apt.sh/updatepkg.sh
 COPY dak.sh /dak.sh
+COPY dak.dev /dak.dev
+
+# DAK START CONFIGURATIONS
+COPY dak.start /dak.start
+
+# PACKAGE CONFIGURATIONS
+RUN /apt.sh/updatepkg.sh
+RUN /apt.sh/basepkg.sh
 RUN /dak.sh/install.sh
 RUN /dak.sh/configure.sh
 
 # DAK DEVELOPER CONFIGURATIONS
-COPY dak.dev /dak.dev
 RUN /dak.dev/init-dev.sh
-
-# DAK START CONFIGURATIONS
-COPY dak.start /dak.start
 
 # IMAGE ENTRY
 ENTRYPOINT [ "/dak.start/run.sh" ]

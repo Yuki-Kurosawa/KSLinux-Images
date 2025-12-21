@@ -1,0 +1,5 @@
+Types: deb deb-src
+URIs: http://localhost.ksyuki.com/kslinux
+Suites: trixie
+Components: main
+Trusted: yes

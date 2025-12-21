@@ -1,0 +1,9 @@
+debs/dists
+debs/*.db
+debs/pool
+debs/pool.old
+
+dak.dev/keys/*.gpg
+dak.dev/keys/*.asc
+dak.dev/keys/*.pgp
+dak.dev/keys/*.deb

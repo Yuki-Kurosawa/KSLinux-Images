@@ -1,19 +1,14 @@
 Types: deb deb-src
 # http://snapshot.debian.org/archive/debian/20250929T000000Z
-URIs: http://mirrors.ustc.edu.cn/debian
+URIs: http://mirrors.tuna.tsinghua.edu.cn/debian
 Suites: trixie trixie-updates
 Components: main
 Signed-By: /usr/share/keyrings/debian-archive-keyring.pgp
 
 Types: deb deb-src
 # http://snapshot.debian.org/archive/debian-security/20250929T000000Z
-URIs: http://mirrors.ustc.edu.cn/debian-security
+URIs: http://mirrors.tuna.tsinghua.edu.cn/debian-security
 Suites: trixie-security
 Components: main
 Signed-By: /usr/share/keyrings/debian-archive-keyring.pgp
 
-Types: deb deb-src
-URIs: http://localhost.ksyuki.com/kslinux
-Suites: trixie
-Components: main
-Trusted: yes
