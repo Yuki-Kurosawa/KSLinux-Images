@@ -70,4 +70,6 @@ debootstrap --no-check-gpg trixie /test file:///srv/dak/ftp 1>/dev/null 2>&1
 
 rm -rvf /test 1>/dev/null 2>&1
 
-ln -s /srv/dak/ftp /var/www/html/kslinux
+mkdir -p /var/www/debs 1>/dev/null 2>&1
+
+ln -s /srv/dak/ftp /var/www/debs/kslinux

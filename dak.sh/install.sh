@@ -26,6 +26,8 @@ echo DONE
 echo -n "INSTALLING nginx ... "
 apt install nginx -y 1>/dev/null #2>&1
 cat /dak.sh/nginx.conf > /etc/nginx/nginx.conf
+cat /dak.sh/dak-web /etc/nginx/sites-available/dak-web
+ln -s /etc/nginx/sites-available/dak-web /etc/nginx/sites-enabled/dak-web
 echo DONE
 
 echo -n "INSTALLING git ... "
