@@ -131,7 +131,7 @@ SHOW_MIXPROGRESS "Generate Package Source $1 ... " "DONE" "Generate Repo Release
 clear
 
 
-debootstrap --no-check-gpg trixie /test http://localhost/kslinux
+debootstrap --no-check-gpg trixie /test http://localhost.ksyuki.com/kslinux
 cp -r /test.tmp /test/pkgs
 cp /dak.dev/keys/.no-key /test/etc/apt/trusted.gpg.d/no-key.gpg
 
