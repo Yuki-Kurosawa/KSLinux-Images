@@ -44,6 +44,8 @@ echo -n "IMPORTING TEST DEVELOPER GPG KEY ... "
 $USER_CMD gpg --no-default-keyring --keyring /srv/dak/keyrings/upload-keyring.gpg --import $KEYPATH  1>/dev/null 2>&1
 echo "DONE"
 
+$USER_CMD $DAK update-db
+
 echo -n "IMPORTING dak REPO GPG KEY ... "
 $USER_CMD $DAK import-keyring -U '%s' /srv/dak/keyrings/upload-keyring.gpg  1>/dev/null 2>&1
 echo "DONE"
